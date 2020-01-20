@@ -1,9 +1,9 @@
 <?php 
 session_start();
-$user=$_COOKIE['fname'];
-if ($user!="") {
+$email=$_COOKIE['email'];
+if ($email!="") {
 
-header("location: members.php");
+header("location: membersList.php");
   
 } else {
  header("location:login.php");
