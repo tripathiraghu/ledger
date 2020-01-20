@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Signin Template · Bootstrap</title>
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Signin | Ledger</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="icon.png">
+<link rel="icon" href="image/icon.png">
 <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
@@ -49,14 +49,14 @@
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="loginconnect.php">
-  <img class="mb-4" src="icon.png" alt="" width="72" height="72">
+  <img class="mb-4" src="image/icon.png" alt="" width="150" height="150">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+  <p class="mt-5 mb-3 text-muted">Designed By <a href="http://tripathiraghu.tk"><span style="font-size: 18px; color: black;">Tripathi Raghu</span></a></p>
 </form>
 </body>
 </html>
