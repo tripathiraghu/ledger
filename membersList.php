@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'connection.php';
+$profileImage="icon.png";
 ?>
 
 <!doctype html>
@@ -49,7 +50,7 @@ include 'connection.php';
 <!-- members List -->
 
 <div class="container" style="margin-top: 100px;">
-	<div class="row">
+
 		
 <?php
 // fetching the user list
@@ -71,10 +72,18 @@ $email=$row['email'];
 $mobile=$row['Mobile'];
 // printing the user list
 
-echo $email;
+
+
+// main styling start
+
+
+echo "<div class="." list".">";
+echo "<img src="."image/user/".$profileImage." width="."50"." height="."50".">";
+echo $row['Mobile'];
+
+
 echo "<br>";
-
-
+echo "</div>";
 
 
 }//closing while
@@ -86,7 +95,7 @@ echo "<br>";
 </div>
 
 
-</div>
+
 
 
 
