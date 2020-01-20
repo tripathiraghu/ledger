@@ -57,16 +57,18 @@ include 'connection.php';
     border-radius: 20px;
   }
 
-
-  .container .list .row{
+  .container .list .amount{
     color: green;
     font-size: 22px;
+    margin: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
     float: right;
-    /*margin-left: 159%;*/
+    @include float-right;
 
-width: 100%;
-
-
+  }
+  .float-right{
+    width: -moz-available;
   }
 
 </style>
@@ -133,9 +135,9 @@ echo "<div class="." list".">";
 echo "<img src=".$profileImage." width="."50"." height="."50"." class="."profileImage".">";
 echo "<div class="." listSub".">";
 echo "<p class="."userName".">". $userName."</p>";
-echo "<p class="."mobile_number"."><a href="."tel:". $mobile.">". $mobile."</a></p>";
+echo "<p class="."mobile_number".">(<a href="."tel:". $mobile.">". $mobile."</a>)</p>";
 echo "</div>";
-echo "<div class="." row".">";
+echo "<div class="."float-right".">";
 echo "<p class="."amount"." >+25.00</p>";
 echo "<br>";
 echo "</div>";
