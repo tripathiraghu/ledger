@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'connection.php';
-$profileImage="icon.png";
+
 ?>
 
 <!doctype html>
@@ -20,8 +20,46 @@ $profileImage="icon.png";
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="icon" href="image/icon.png">
+<style type="text/css">
+  <!-- styling of the list -->
+  body{
+
+
+  }
+
+  .container .list{
+    background-color: white;
+    border:0.5px solid lightgrey;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+  }
+  .container .list .listSub {
+    display: block;
+
+  }
+  .container .list .listSub .mobile_number{
+    font-size: 14px;
+    padding-left: 8px;
+    /*padding-top: 10px;*/
+    margin:0px;
+    display: block;
+  }
+  .container .list .listSub .userName{
+    font-size: 20px;
+    padding-left: 10px;
+    /*padding-top: 5px;*/
+    margin:0px;
+    display: block;
+  }
+  .container .list .profileImage{
+    border-radius: 20px;
+  }
+
+</style>
 </head>
-<body>
+<body style="background-color: ghostwhite;">
 <!-- navbar -->
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -32,10 +70,10 @@ $profileImage="icon.png";
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="addmember.php">Add Member</a>
+            <a class="nav-link" href="addMember.php">Add Member</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout.php">Logout</a>
@@ -54,7 +92,7 @@ $profileImage="icon.png";
 		
 <?php
 // fetching the user list
-$sql_tab="SELECT * FROM userdetail";
+$sql_tab="SELECT * FROM members";
 $dt=mysqli_query($con,$sql_tab);
 $a=mysqli_num_rows($dt);
 
@@ -66,10 +104,12 @@ if ($a>0)
 
 $id = $row['id'];
 
-$userName=$row['userName'];
+$userName=$row['name'];
 
 $email=$row['email'];
-$mobile=$row['Mobile'];
+$mobile=$row['mobile_number'];
+$profileImage=$row['profileImage'];
+
 // printing the user list
 
 
@@ -78,9 +118,11 @@ $mobile=$row['Mobile'];
 
 
 echo "<div class="." list".">";
-echo "<img src="."image/user/".$profileImage." width="."50"." height="."50".">";
-echo $row['Mobile'];
-
+echo "<img src=".$profileImage." width="."50"." height="."50"." class="."profileImage".">";
+echo "<div class="." listSub".">";
+echo "<p class="."userName".">". $userName."</p>";
+echo "<p class="."mobile_number".">(<a href="."tel:". $mobile.">". $mobile."</a>)</p>";
+echo "</div>";
 
 echo "<br>";
 echo "</div>";
