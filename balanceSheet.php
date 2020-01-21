@@ -1,9 +1,40 @@
 <?php
 ob_start();
+include 'connection.php';
 session_start();
-$name=$_GET['nm'];
+$id=$_GET['nm'];
+
+// fetching the user detail current user details
+$sql_tab="SELECT * FROM members where id='$id'";
+$dt=mysqli_query($con,$sql_tab);
+$a=mysqli_num_rows($dt);
+
+if ($a>0)
+{
+  	while($row= mysqli_fetch_array($dt,MYSQLI_ASSOC))
+{
+
+
+$id = $row['id'];
+
+$userName=$row['name'];
+
+$email=$row['email'];
+$mobile=$row['mobile_number'];
+$profileImage=$row['profileImage'];
+
+}//closing while
+
+}//closiung if
 
 ?>
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +44,7 @@ $name=$_GET['nm'];
     <meta name="author" content="">
     <meta name="generator" content="">
     <title>Balance Sheet | Ledger</title>
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -44,11 +76,31 @@ $name=$_GET['nm'];
       </div>
     </nav>
 <!-- user name -->
-<div class="container">
-<h2 style="margin-top: 100px;" align="center"><?php  echo $name; ?></h2>
+<div class="container " style="margin-top: 80px;">
 
+<div class="row">
+	<!-- profile picture -->
+	<div class="col-3">
+		<img src="<?php  echo $profileImage; ?>" width="50" height="50" style="border-radius: 20px;">
+	</div>
+
+
+	<!-- profile Name -->
+	<div class="col-6">
+		<h2 align="center"><?php  echo $userName; ?></h2>
 </div>
-<div class="container"></div>
+	<!-- call button -->
+	<div class="col-3" align="center">
+		<a href="tel:<?php  echo $mobile; ?>" class="text-success"> 
+			<i class="fa fa-phone-square" aria-hidden="true" style="font-size: 50px"></i>
+		</a>
+</div>
+</div>
+</div>
+
+<div class="container">
+	
+</div>
 
 </body>
 </html>

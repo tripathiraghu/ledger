@@ -65,7 +65,8 @@ include 'connection.php';
     margin-right: 0px;
     float: right;
     @include float-right;
-
+    padding-top: 2%;
+    padding-right: 2%;
   }
   .float-right{
     width: 100%;
@@ -130,7 +131,7 @@ $profileImage=$row['profileImage'];
 
 // main styling start
 
-echo "<a href=balanceSheet.php?nm=".$row['name'].">";
+echo "<a href=balanceSheet.php?nm=".$row['id'].">";
 echo "<div class="." list".">";
 echo "<img src=".$profileImage." width="."50"." height="."50"." class="."profileImage".">";
 echo "<div class="." listSub".">";
