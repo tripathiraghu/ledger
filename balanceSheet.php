@@ -116,7 +116,7 @@ $profileImage=$row['profileImage'];
 </div>
 
 <!-- transactions box -->
-<div class="container">
+<div class="container" style="margin-bottom: 70px;">
 	<?php
 // fetching the user list
 $sql_tab="SELECT * FROM transaction where id='$userId'";
@@ -181,7 +181,7 @@ if ($transactionType=="Credit") {
 
 
 <!-- base buttons -->
-<div class="baseButton fixed-bottom container" style="margin-bottom: 20px;">
+<div class="baseButton fixed-bottom container" style="padding-bottom: 20px; padding-top: 10px; background-color: #fff;">
   <div class="row">
   <!-- credit -->
   <div class="col-6">
