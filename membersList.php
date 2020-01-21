@@ -68,7 +68,7 @@ include 'connection.php';
 
   }
   .float-right{
-    width: -moz-available;
+    width: 100%;
   }
 
 </style>

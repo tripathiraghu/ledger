@@ -59,7 +59,7 @@
                         </div>
                          <div class="form-group" style="margin-top: 15px; margin-left: 10px ;margin-right: 10px;">
                             <label for="Mobile Number" required>Mobile Number</label>
-                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Jhon@tr.com">
+                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="9829******">
                         </div>
                         <div class="form-group" style="margin-top: 15px; margin-left: 10px ;margin-right: 10px;">
                         	<label for="profile_pic" required>Select A Profile Picture</label>
@@ -69,7 +69,7 @@
                     </div>
                
 
-                       <button type="button" class="btn " style="width:96%; background-color:rgb(52, 58, 64);color: #fff; font-size: 20px; margin:10px; ">Back To Member</button>
+                       <button  onclick="window.location.href = 'index.php';"  class="btn " style="width:96%; background-color:rgb(52, 58, 64);color: #fff; font-size: 20px; margin:10px; ">Back To Member</button>
  </form>
 
 </div>
