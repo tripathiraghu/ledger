@@ -3,7 +3,7 @@ session_start();
 include 'connection.php';
 
 
-$photos="image/user/". $_FILES["fileToUpload"]["name"];
+
 // photo upload
 
 

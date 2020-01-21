@@ -87,7 +87,7 @@ $profileImage=$row['profileImage'];
 
 	<!-- profile Name -->
 	<div class="col-6">
-		<h2 align="center"><?php  echo $userName; ?></h2>
+		<p style="padding-top: 10px;" align="center"><?php  echo $userName; ?></p>
 </div>
 	<!-- call button -->
 	<div class="col-3" align="center">
@@ -100,6 +100,19 @@ $profileImage=$row['profileImage'];
 
 <div class="container">
 	
+</div>
+<div class="baseButton fixed-bottom container" style="margin-bottom: 20px;">
+  <div class="row">
+  <!-- credit -->
+  <div class="col-6">
+    <button type="button" class="btn btn-success btn-block"><i class="fa fa-arrow-down" aria-hidden="true"></i></i> Credit</button>
+  </div>
+<!-- debit -->
+<div class="col-6">
+    <button type="button" class="btn btn-danger btn-block"><i class="fa fa-arrow-up" aria-hidden="true"></i> Debit</button>
+  </div>
+
+  </div>
 </div>
 
 </body>
