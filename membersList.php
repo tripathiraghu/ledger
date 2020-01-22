@@ -184,17 +184,19 @@ $amountDisplay=$amountDisplay-$y;
 
 if ($amountDisplay>=0) {
 echo "<div class="."float-right-positive".">";
-echo "<p class="."amount"." >+".$amountDisplay."</p>";
+echo "<p class="."amount"." >+".$amountDisplay." &#8377;</p>";
 echo "<br>";
 echo "</div>";
 
 } else{
   echo "<div class="."float-right-negative".">";
-echo "<p class="."amount"." >".$amountDisplay."</p>";
+echo "<p class="."amount"." >".$amountDisplay." &#8377;</p>";
 echo "<br>";
 echo "</div>";
 
 }
+
+ 
 
 
 
@@ -211,10 +213,14 @@ echo "</a>";
 </div>
 
 
+<!-- indian money system -->
 
-
-
-
+<!-- $amount = '100000';
+setlocale(LC_MONETARY, 'en_IN');
+$amount = money_format('%!.0n', $amount);
+echo $amount;
+ -->
+<!-- indian money sytem ends -->
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
