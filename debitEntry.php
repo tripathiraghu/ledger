@@ -6,7 +6,7 @@ $userId=$_GET['nm'];
 $id=$userId;
 $amount = $_GET['amount'];
 $reason = $_GET['reason'];
-$type = "Credit";
+$type = "Debit";
 echo $userId;
 echo "<br>";
 echo $amount;

@@ -40,7 +40,7 @@ $profileImage=$row['profileImage'];
     <meta name="author" content="">
     <meta name="generator" content="">
     
-	<title>Add Credit | Ledger</title>
+	<title>Add Debit | Ledger</title>
 <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -68,7 +68,7 @@ $profileImage=$row['profileImage'];
 <div class="col-1">
 			</div>
 				<div class="col-2">
-	<i class="fa fa-long-arrow-left" style="font-size: 25px; margin-top: 10px; margin-right: 15px; margin-left: 15px; " aria-hidden="true"></i>  
+	<i class="fa fa-long-arrow-right" style="font-size: 25px; margin-top: 10px; margin-right: 15px; margin-left: 15px; " aria-hidden="true"></i>  
 	</div>
 	<div class="col-1">
 			</div>
@@ -80,7 +80,7 @@ $profileImage=$row['profileImage'];
 	<p style="font-size: 14px; text-align: center; margin-top: 0px; margin-inline: auto;">Getting <?php echo $userName ?></p>
 
 	<div class="container">
-	<form style="margin:0px; " type="post" action="creditEntry.php">
+	<form style="margin:0px; " type="post" action="debitEntry.php">
 		<input type="text" name="amount" placeholder="0"  style="background-color: #0000; color: white; border: 0px transparent; font-size: 60px;text-align: center;width: 100%; ">
 
 		<input type="text" name="reason" placeholder="what is this for?"  style="  color: black; border: 0px transparent; font-size: 18px;text-align: center;width: 70%;border-radius: 20px; margin: 0px 0px 0px 50px; padding: 20px; background-blend-mode: darken;" >

@@ -91,7 +91,7 @@ $profileImage=$row['profileImage'];
       </div>
     </nav>
 <!-- user name -->
-<div class="container " style="margin-top: 80px;">
+<div class="container " style="margin-top: 80px; position: fixed;background-color: white;">
 
 <div class="row">
 	<!-- profile picture -->
@@ -116,7 +116,7 @@ $profileImage=$row['profileImage'];
 </div>
 
 <!-- transactions box -->
-<div class="container" style="margin-bottom: 70px;">
+<div class="container" style="margin-bottom: 70px; padding-top: 150px;">
 	<?php
 // fetching the user list
 $sql_tab="SELECT * FROM transaction where id='$userId'";
