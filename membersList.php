@@ -55,7 +55,7 @@ include 'connection.php';
   }
 
   .container .list .amount{
-    color: green;
+   /* color: green;*/
     font-size: 22px;
     margin: 0px;
     padding-right: 0px;
@@ -65,8 +65,16 @@ include 'connection.php';
     padding-top: 2%;
     padding-right: 2%;
   }
-  .float-right{
+  .float-right-positive{
     width: 100%;
+     color: green;
+  }
+
+
+  .float-right-negative{
+    width: 100%;
+     color: red;
+
   }
 
 </style>
@@ -135,10 +143,62 @@ echo "<div class="." listSub".">";
 echo "<p class="."userName".">". $userName."</p>";
 echo "<p class="."mobile_number"."><a href="."tel:". $mobile.">". $mobile."</a></p>";
 echo "</div>";
-echo "<div class="."float-right".">";
-echo "<p class="."amount"." >+25.00</p>";
+
+// credit debit amount calculation
+
+
+$amountDisplay = 0;
+$sql_tab1="SELECT * FROM transaction where id='$id'";
+$dp=mysqli_query($con,$sql_tab1);
+$b=mysqli_num_rows($dp);
+
+if ($b>0)
+{
+    while($row1= mysqli_fetch_array($dp,MYSQLI_ASSOC))
+{
+
+if ($row1['type']=="Credit") {
+  $z=$row1['amount'];
+  $amountDisplay=$amountDisplay+$z;
+
+  // echo $amountDisplay;
+   // $x=1;
+  // $y=2;
+  // $z=$x+$y;
+  // echo $z;
+
+    // $row1['amount']+$amountDisplay;
+  
+
+} else {
+
+$y=$row1['amount'];
+$amountDisplay=$amountDisplay-$y;
+
+}
+
+
+}
+
+}
+
+if ($amountDisplay>=0) {
+echo "<div class="."float-right-positive".">";
+echo "<p class="."amount"." >+".$amountDisplay."</p>";
 echo "<br>";
 echo "</div>";
+
+} else{
+  echo "<div class="."float-right-negative".">";
+echo "<p class="."amount"." >".$amountDisplay."</p>";
+echo "<br>";
+echo "</div>";
+
+}
+
+
+
+// back to displaying 
 echo "</div>";
 
 echo "</a>";
