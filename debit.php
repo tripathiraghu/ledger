@@ -77,7 +77,7 @@ $profileImage=$row['profileImage'];
 </div>
 </div>
 <br>
-	<p style="font-size: 14px; text-align: center; margin-top: 0px; margin-inline: auto;">Getting <?php echo $userName ?></p>
+	<p style="font-size: 14px; text-align: center; margin-top: 0px; margin-inline: auto;">Paying <?php echo $userName ?></p>
 
 	<div class="container">
 	<form style="margin:0px; " type="post" action="debitEntry.php">
@@ -92,7 +92,7 @@ $profileImage=$row['profileImage'];
 		<br><br>
 
 		<button type="submit" class="btn btn-light btn-lg btn-block" style="margin-top: 20px;   margin: auto;
-  width: 50%;" >Submit</button>
+  width: 50%;" >Pay</button>
 	</form>
 </div>
 

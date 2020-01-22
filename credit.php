@@ -92,7 +92,7 @@ $profileImage=$row['profileImage'];
 		<br><br>
 
 		<button type="submit" class="btn btn-light btn-lg btn-block" style="margin-top: 20px;   margin: auto;
-  width: 50%;" >Submit</button>
+  width: 50%;" >Credit</button>
 	</form>
 </div>
 
