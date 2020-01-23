@@ -1,11 +1,13 @@
 <?php 
+ob_start();
 session_start();
 $email=$_COOKIE['email'];
-if ($email!="") {
+if ($email=="") {
 
-header("location: membersList.php");
+header("location:login.php");
   
 } else {
- header("location:login.php");
+header("location: membersList.php");
+ 
 }
 ?>
